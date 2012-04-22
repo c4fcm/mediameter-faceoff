@@ -1,0 +1,58 @@
+<%
+// do some final calculations for the display of the data (data computation should be in the views code, not here!)
+
+maxBarWidth = 270;
+
+maxSourceA = dataA.female + dataA.male;
+scaledDataA = {
+    female: dataA.female / maxSourceA,
+    male: dataA.male / maxSourceA
+};
+
+maxSourceB = dataB.female + dataB.male;
+scaledDataB = {
+    female: dataB.female / maxSourceB,
+    male: dataB.male / maxSourceB
+};
+
+%>
+
+<div id="gender-content" class="comparison-content">
+
+    <h2>Gender: <%= year %></h2>
+
+    <ul class="source-a-container">
+        <lh><%= sourceA %></lh>
+        <li class="female">
+            <div class="bar-chart">
+                <label><%= Math.round(scaledDataA.female*100) %>%</label>
+                <div class="bar" style="width:<%= Math.round(maxBarWidth * scaledDataA.female) %>px"></div>
+            </div>
+        </li>
+        <li class="male">
+            <div class="bar-chart">
+                <label><%= Math.round(scaledDataA.male*100) %>%</label>
+                <div class="bar" style="width:<%= Math.round(maxBarWidth * scaledDataA.male) %>px"></div>
+            </div>
+        </li>
+        <li class="note">gender identified for <%= Math.round(maxSourceA*100) %>% of articles<li>
+    </ul>
+    
+    <ul class="source-b-container">
+        <lh><%= sourceB %></lh>
+        <li class="female">
+            <div class="bar-chart">
+                <div class="bar" style="width:<%= Math.round(maxBarWidth * scaledDataB.female) %>px"></div>
+                <label><%= Math.round(scaledDataB.female*100) %>%</label>
+            </div>
+        </li>
+        <li class="male">
+            <div class="bar-chart">
+                <div class="bar" style="width:<%= Math.round(maxBarWidth * scaledDataB.male) %>px"></div>
+                <label><%= Math.round(scaledDataB.male*100) %>%</label>
+            </div>
+        </li>
+        <li class="note">gender identified for <%= Math.round(maxSourceB*100) %>% of articles<li>
+    </ul>
+
+</div>

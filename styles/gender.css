@@ -1,0 +1,38 @@
+/** Styles specific to the gender comparison **/
+
+#gender-content h2 {
+    margin: 0px;
+    padding: 0px;  
+    margin-bottom: 10px;
+}
+
+#gender-content ul {
+    display: inline-block;
+    width: 280px; 
+    margin:0px;
+    padding: 0px;
+    list-style: none;
+}
+
+#gender-content ul.source-a-container {
+    text-align: right;
+    margin-right: 20px;
+}
+
+#gender-content ul lh {
+    font-weight: bold;
+}
+
+#gender-content li.male .bar {
+    background-image: url('../images/icon-male.png');
+} 
+
+#gender-content li.female .bar {
+    background-image: url('../images/icon-female.png');
+}
+
+#gender-content li.note {
+    font-size: 12px;
+    color: #666666;
+    padding-top: 5px;
+}

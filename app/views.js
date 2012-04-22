@@ -51,6 +51,26 @@
                 $("#newspaper_comparison").html(_.template(data, {orientation:'left', source:that.left_newspaper, year:that.year, newspaper:that.left_news_data[that.year]}));
                 $("#newspaper_comparison").append(_.template(data, {orientation:'right', source:that.right_newspaper, year:that.year, newspaper:that.right_news_data[that.year]}));
               }});
+
+      $.ajax({url:"templates/gender.template", 
+              type: "GET",
+              dataType: "text",
+              success: function(data){
+                $("#gender-container").html(_.template(data, {
+                    year: that.year, 
+                    sourceA: that.left_newspaper, 
+                    dataA: { female: that.left_news_data[that.year].female_author / that.left_news_data[that.year].total_articles,
+                             male: that.left_news_data[that.year].male_author / that.left_news_data[that.year].total_articles,
+                             unknown: (that.left_news_data[that.year].unknown_gender_author + that.left_news_data[that.year].no_author) / that.left_news_data[that.year].total_articles
+                             },
+                    sourceB: that.right_newspaper, 
+                    dataB: { female: that.right_news_data[that.year].female_author / that.right_news_data[that.year].total_articles,
+                             male: that.right_news_data[that.year].male_author / that.right_news_data[that.year].total_articles,
+                             unknown: (that.right_news_data[that.year].unknown_gender_author + that.right_news_data[that.year].no_author) / that.right_news_data[that.year].total_articles
+                             },
+                    }));
+            }});
+
     },
   
     year1979: function(){
