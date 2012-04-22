@@ -1,0 +1,34 @@
+<%
+// do some final calculations for the display of the data (data computation should be in the views code, not here!)
+maxBarWidth = 180;
+
+maxSourceValue = 0.4;
+scaledDataA = dataA / maxSourceValue;
+scaledDataB = dataB / maxSourceValue;
+%>
+
+<div id="sports-content" class="comparison-content">
+
+    <h2>Sports: <%= year %></h2>
+
+    <ul class="source-a-data">
+        <lh><%= sourceA %></lh>
+        <li>
+            <div class="bar-chart">
+                <label><%= Math.round(dataA*100) %>%</label>
+                <div class="bar" style="width:<%= Math.round(maxBarWidth * scaledDataA) %>px"></div>
+            </div>
+        </li>
+    </ul>
+    
+    <ul class="source-b-data">
+        <lh><%= sourceB %></lh>
+        <li>
+            <div class="bar-chart">
+                <div class="bar" style="width:<%= Math.round(maxBarWidth * scaledDataB) %>px"></div>
+                <label><%= Math.round(dataB*100) %>%</label>
+            </div>
+        </li>
+    </ul>
+
+</div>

@@ -1,7 +1,7 @@
 <%
 // do some final calculations for the display of the data (data computation should be in the views code, not here!)
 
-maxBarWidth = 270;
+maxBarWidth = 200;
 
 maxSourceA = dataA.female + dataA.male;
 scaledDataA = {
@@ -21,38 +21,38 @@ scaledDataB = {
 
     <h2>Gender: <%= year %></h2>
 
-    <ul class="source-a-container">
+    <ul class="source-a-data">
         <lh><%= sourceA %></lh>
-        <li class="female">
-            <div class="bar-chart">
+        <li>
+            <div class="bar-chart female">
                 <label><%= Math.round(scaledDataA.female*100) %>%</label>
                 <div class="bar" style="width:<%= Math.round(maxBarWidth * scaledDataA.female) %>px"></div>
             </div>
         </li>
-        <li class="male">
-            <div class="bar-chart">
+        <li>
+            <div class="bar-chart male">
                 <label><%= Math.round(scaledDataA.male*100) %>%</label>
                 <div class="bar" style="width:<%= Math.round(maxBarWidth * scaledDataA.male) %>px"></div>
             </div>
         </li>
-        <li class="note">gender identified for <%= Math.round(maxSourceA*100) %>% of articles<li>
+        <li><small>gender identified for <%= Math.round(maxSourceA*100) %>% of articles</small><li>
     </ul>
     
-    <ul class="source-b-container">
+    <ul class="source-b-data">
         <lh><%= sourceB %></lh>
-        <li class="female">
-            <div class="bar-chart">
+        <li>
+            <div class="bar-chart female">
                 <div class="bar" style="width:<%= Math.round(maxBarWidth * scaledDataB.female) %>px"></div>
                 <label><%= Math.round(scaledDataB.female*100) %>%</label>
             </div>
         </li>
-        <li class="male">
-            <div class="bar-chart">
+        <li>
+            <div class="bar-chart male">
                 <div class="bar" style="width:<%= Math.round(maxBarWidth * scaledDataB.male) %>px"></div>
                 <label><%= Math.round(scaledDataB.male*100) %>%</label>
             </div>
         </li>
-        <li class="note">gender identified for <%= Math.round(maxSourceB*100) %>% of articles<li>
+        <li><small>gender identified for <%= Math.round(maxSourceB*100) %>% of articles<small><li>
     </ul>
 
 </div>

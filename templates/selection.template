@@ -1,25 +1,29 @@
-<div id="timeline"><img id="1979" src="images/1979_unselected.png"/><img id="1989" src="images/1989_unselected.png"/><img id="1999" src="images/1999_unselected.png"/><img id="2009" src="images/2009_unselected.png"/></div>
+<div id="timeline">
 
-<form id="select_newspapers">
-<select name="left" id="left_newspaper">
-  <option>Chicago Tribune</option>
-  <option>Los Angeles Times</option>
-  <option>New York Times</option>
-  <option>Washington Post</option>
-</select>
+    <img id="1979" src="images/1979_unselected.png"/><img id="1989" src="images/1989_unselected.png"/><img id="1999" src="images/1999_unselected.png"/><img id="2009" src="images/2009_unselected.png"/></div>
 
-<select name="right" id="right_newspaper">
-  <option>Chicago Tribune</option>
-  <option>Los Angeles Times</option>
-  <option>New York Times</option>
-  <option>Washington Post</option>
-</select>
-</form>
+    <form id="select_newspapers">
+        <select name="left" id="left_newspaper">
+          <option>Chicago Tribune</option>
+          <option>Los Angeles Times</option>
+          <option>New York Times</option>
+          <option>Washington Post</option>
+        </select>
+        
+        <select name="right" id="right_newspaper">
+          <option>Chicago Tribune</option>
+          <option>Los Angeles Times</option>
+          <option>New York Times</option>
+          <option>Washington Post</option>
+        </select>
+    </form>
+
+</div>    
 
 <div id="newspaper_comparison">
 
 </div>
 
-<div id="gender-container" class="comparison-container double-width">
+<div id="gender-comparison" class="comparison-container double-width"></div>
 
-</div>
+<div id="sports-comparison" class="comparison-container"></div>

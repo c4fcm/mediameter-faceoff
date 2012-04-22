@@ -56,7 +56,7 @@
               type: "GET",
               dataType: "text",
               success: function(data){
-                $("#gender-container").html(_.template(data, {
+                $("#gender-comparison").html(_.template(data, {
                     year: that.year, 
                     sourceA: that.left_newspaper, 
                     dataA: { female: that.left_news_data[that.year].female_author / that.left_news_data[that.year].total_articles,
@@ -68,6 +68,19 @@
                              male: that.right_news_data[that.year].male_author / that.right_news_data[that.year].total_articles,
                              unknown: (that.right_news_data[that.year].unknown_gender_author + that.right_news_data[that.year].no_author) / that.right_news_data[that.year].total_articles
                              },
+                    }));
+            }});
+
+      $.ajax({url:"templates/sports.template", 
+              type: "GET",
+              dataType: "text",
+              success: function(data){
+                $("#sports-comparison").html(_.template(data, {
+                    year: that.year, 
+                    sourceA: that.left_newspaper, 
+                    dataA: that.left_news_data[that.year].sports / that.left_news_data[that.year].total_articles,
+                    sourceB: that.right_newspaper, 
+                    dataB: that.right_news_data[that.year].sports / that.right_news_data[that.year].total_articles,
                     }));
             }});
 
