@@ -1,27 +1,30 @@
-<div id="controls">
-    <div class="logo"><img src="images/mediameter-logo.png"></div>
+<div id="header">
 
-    <div id="timeline">
-    <img id="1979" src="images/1979_unselected.png"/><img id="1989" src="images/1989_unselected.png"/><img id="1999" src="images/1999_unselected.png"/><img id="2009" src="images/2009_unselected.png"/>
-    </div>
-    
-    <form id="select_newspapers">
-        <select name="left" id="left_newspaper">
-          <option>Chicago Tribune</option>
-          <option>Los Angeles Times</option>
-          <option>New York Times</option>
-          <option>Washington Post</option>
+    <h2>
+    Compare the 
+        <select name="first" id="first-newspaper-control">
+            <option>Chicago Tribune</option>
+            <option>Los Angeles Times</option>
+            <option>New York Times</option>
+            <option>Washington Post</option>
         </select>
-        
-        <select name="right" id="right_newspaper">
-          <option>Chicago Tribune</option>
-          <option>Los Angeles Times</option>
-          <option>New York Times</option>
-          <option>Washington Post</option>
+    and the 
+        <select name="second" id="second-newspaper-control">
+            <option>Chicago Tribune</option>
+            <option>Los Angeles Times</option>
+            <option>New York Times</option>
+            <option>Washington Post</option>
         </select>
-    </form>
+    in 
+        <select name="year" id="year-control">
+            <option>1979</option>
+            <option>1989</option>
+            <option>1999</option>
+            <option>2009</option>
+        </select>
+    </h2>
 
-</div>    
+</div>
 
 <div class="topic-comparisons" class="comparison-group">
 
@@ -38,7 +41,7 @@
 <div class="comparison-group">
 
     <div id="gender-comparison" class="comparison-container"></div>
-
+    
     <div id="small-print" class="comparison-container last-in-row">
         <div class="comparison-content">
         <p>
@@ -48,3 +51,5 @@
     </div>
 
 </div>
+
+<div id="logo"><img src="images/mediameter-logo-all-white.png"></div>

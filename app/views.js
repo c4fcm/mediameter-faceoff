@@ -6,22 +6,12 @@
     MAX_BAR_WIDTH: 230,
     
     events: {
-      "change #right_newspaper": "drawNewspaperComparison",
-      "change #left_newspaper": "drawNewspaperComparison",
-      "click #1979": "year1979",
-      "click #1989": "year1989",
-      "click #1999": "year1999",
-      "click #2009": "year2009"
+      "change #first-newspaper-control":    "drawNewspaperComparison",
+      "change #second-newspaper-control":   "drawNewspaperComparison",
+      "change #year-control":               "drawNewspaperComparison",
     },
 
     initialize: function(){
-      _.bindAll(this, 'render');
-      _.bindAll(this, 'loadNewspaperData');
-      _.bindAll(this, 'loadNewspaperData');
-      _.bindAll(this, 'year1979');
-      _.bindAll(this, 'year1989');
-      _.bindAll(this, 'year1999');
-      _.bindAll(this, 'year2009');
       this.year = 1979;
       this.loadNewspaperData();
       this.render();
@@ -41,8 +31,9 @@
 
     drawNewspaperComparison: function(){
       var that = this;
-      this.left_newspaper = $('#left_newspaper').val();
-      this.right_newspaper = $('#right_newspaper').val();
+      this.year = $('#year-control').val();
+      this.left_newspaper = $('#first-newspaper-control').val();
+      this.right_newspaper = $('#second-newspaper-control').val();
       this.left_news_data = this.newspaperData[this.left_newspaper];
       this.right_news_data = this.newspaperData[this.right_newspaper];
 
@@ -72,7 +63,7 @@
               success: function(data){
                 $("#sports-comparison").html(_.template(data, {
                     topic: 'sports',
-                    topicTitle: 'Sports',
+                    topicTitle: 'Sports Coverage',
                     topicDescription: "What percentage of articles were about sports coverage?",
                     maxBarWidth: that.MAX_BAR_WIDTH,
                     year: that.year, 
@@ -89,7 +80,7 @@
               success: function(data){
                 $("#foreign-comparison").html(_.template(data, {
                     topic: 'foreign',
-                    topicTitle: 'Foreign',
+                    topicTitle: 'Foreign Coverage',
                     topicDescription: "What percentage of articles were about countries that weren't involved with the US?",
                     maxBarWidth: that.MAX_BAR_WIDTH,
                     year: that.year, 
@@ -106,7 +97,7 @@
               success: function(data){
                 $("#international-comparison").html(_.template(data, {
                     topic: 'international',
-                    topicTitle: 'International',
+                    topicTitle: 'International Coverage',
                     topicDescription: "What percentage of articles were about countries where the US had concerns?",
                     maxBarWidth: that.MAX_BAR_WIDTH,
                     year: that.year, 
@@ -123,7 +114,7 @@
               success: function(data){
                 $("#arts-comparison").html(_.template(data, {
                     topic: 'arts',
-                    topicTitle: 'Arts',
+                    topicTitle: 'Arts Coverage',
                     topicDescription: "What percentage of articles were about popular culture or the arts?",
                     maxBarWidth: that.MAX_BAR_WIDTH,
                     year: that.year, 
@@ -134,36 +125,8 @@
                     }));
             }});
 
-    },
-  
-    year1979: function(){
-      this.changeYear(1979);
-    },
-    year1989: function(){
-      this.changeYear(1989);
-    },
-    year1999: function(){
-      this.changeYear(1999);
-    },
-    year2009: function(){
-      this.changeYear(2009);
-    },
-
-    changeYear: function(new_year){
-      this.year = new_year
-      years = [1979, 1989, 1999, 2009];
-      for( year in years){
-        year = years[year];
-        if( new_year == year){
-           $('#'+year.toString()).attr("src", "images/" + new_year.toString() + "_selected.png");
-        }else{
-           $('#'+year.toString()).attr("src", "images/" + year.toString() + "_unselected.png");
-        }
-      }
-      this.drawNewspaperComparison();
     }
-  
-    
+
   });
   var splashView = new SplashView;
   $("#frame").html(splashView.el);

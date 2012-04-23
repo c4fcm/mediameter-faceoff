@@ -14,7 +14,7 @@ scaledDataB = {
 
 <div id="gender-content" class="comparison-content">
 
-    <h2>Gender: <%= year %></h2>
+    <h2>Journalist Gender: <%= year %></h2>
 
     <ul class="source-a-data">
         <lh><%= sourceA %></lh>

@@ -15,33 +15,53 @@ body{
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
-.logo {
-    float: right;
-    margin-right: 10px;
+#logo {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
 }
 
 /* Input selection area */
 
-#controls {
+#header {
     border-radius:15px;
-    padding: 10px;
+    padding: 15px;
     background: #EC6D6D;
     margin-bottom:15px;
     margin-top: 15px;
-}
-
-#timeline{
-}
-
-select {
-    padding: 10px;
-    font-size:20px;
 }
 
 #small-print {
     background: #83AB89;
     font-size: 14px;
     line-height: 20px;
+}
+
+#small-print .comparison-content {
+    width: 470px;
+}
+
+.control label {
+    vertical-align: top;
+    padding-top: 5px;
+    margin-right: 5px;
+    font-size: 18px;
+    display: inline-block;
+}
+
+select {
+    display: inline-block;
+    width: auto;
+    margin: 0px 10px;
+}
+
+form {
+    margin: 0px;
+}
+
+#year-options {
+    display: inline-block;
 }

@@ -18,7 +18,6 @@
 
 .comparison-content {
     color: #354458;
-    width: 471px;
 }
 
 .comparison-content p {
@@ -39,7 +38,7 @@
 
 .comparison-content ul {
     display: inline-block;
-    width: 229px; 
+    width: 228px; 
     margin:0px;
     padding: 0px;
     margin-top: 5px;
