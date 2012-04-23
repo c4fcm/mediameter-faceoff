@@ -1,20 +1,15 @@
 <%
 // do some final calculations for the display of the data (data computation should be in the views code, not here!)
-
-maxBarWidth = 200;
-
 maxSourceA = dataA.female + dataA.male;
 scaledDataA = {
     female: dataA.female / maxSourceA,
     male: dataA.male / maxSourceA
 };
-
 maxSourceB = dataB.female + dataB.male;
 scaledDataB = {
     female: dataB.female / maxSourceB,
     male: dataB.male / maxSourceB
 };
-
 %>
 
 <div id="gender-content" class="comparison-content">

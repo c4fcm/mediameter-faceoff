@@ -2,7 +2,9 @@
 
   //View ListView
   var SplashView = Backbone.View.extend({
-     
+    
+    MAX_BAR_WIDTH: 250,
+    
     events: {
       "change #right_newspaper": "drawNewspaperComparison",
       "change #left_newspaper": "drawNewspaperComparison",
@@ -44,19 +46,12 @@
       this.left_news_data = this.newspaperData[this.left_newspaper];
       this.right_news_data = this.newspaperData[this.right_newspaper];
 
-      $.ajax({url:"templates/newspaper.template", 
-              type: "GET",
-              dataType: "text",
-              success: function(data){
-                $("#newspaper_comparison").html(_.template(data, {orientation:'left', source:that.left_newspaper, year:that.year, newspaper:that.left_news_data[that.year]}));
-                $("#newspaper_comparison").append(_.template(data, {orientation:'right', source:that.right_newspaper, year:that.year, newspaper:that.right_news_data[that.year]}));
-              }});
-
       $.ajax({url:"templates/gender.template", 
               type: "GET",
               dataType: "text",
               success: function(data){
                 $("#gender-comparison").html(_.template(data, {
+                    maxBarWidth: that.MAX_BAR_WIDTH,
                     year: that.year, 
                     sourceA: that.left_newspaper, 
                     dataA: { female: that.left_news_data[that.year].female_author / that.left_news_data[that.year].total_articles,
@@ -71,16 +66,71 @@
                     }));
             }});
 
-      $.ajax({url:"templates/sports.template", 
+      $.ajax({url:"templates/topic.template", 
               type: "GET",
               dataType: "text",
               success: function(data){
                 $("#sports-comparison").html(_.template(data, {
+                    topic: 'sports',
+                    topicTitle: 'Sports',
+                    topicDescription: "What percentage of articles were about sports coverage?",
+                    maxBarWidth: that.MAX_BAR_WIDTH,
                     year: that.year, 
                     sourceA: that.left_newspaper, 
                     dataA: that.left_news_data[that.year].sports / that.left_news_data[that.year].total_articles,
                     sourceB: that.right_newspaper, 
                     dataB: that.right_news_data[that.year].sports / that.right_news_data[that.year].total_articles,
+                    }));
+            }});
+
+      $.ajax({url:"templates/topic.template", 
+              type: "GET",
+              dataType: "text",
+              success: function(data){
+                $("#foreign-comparison").html(_.template(data, {
+                    topic: 'foreign',
+                    topicTitle: 'Foreign',
+                    topicDescription: "What percentage of articles were about countries that weren't involved with the US?",
+                    maxBarWidth: that.MAX_BAR_WIDTH,
+                    year: that.year, 
+                    sourceA: that.left_newspaper, 
+                    dataA: that.left_news_data[that.year].foreign / that.left_news_data[that.year].total_articles,
+                    sourceB: that.right_newspaper, 
+                    dataB: that.right_news_data[that.year].foreign / that.right_news_data[that.year].total_articles,
+                    }));
+            }});
+
+      $.ajax({url:"templates/topic.template", 
+              type: "GET",
+              dataType: "text",
+              success: function(data){
+                $("#international-comparison").html(_.template(data, {
+                    topic: 'international',
+                    topicTitle: 'International',
+                    topicDescription: "What percentage of articles were about countries that were involved with the US?",
+                    maxBarWidth: that.MAX_BAR_WIDTH,
+                    year: that.year, 
+                    sourceA: that.left_newspaper, 
+                    dataA: that.left_news_data[that.year].international / that.left_news_data[that.year].total_articles,
+                    sourceB: that.right_newspaper, 
+                    dataB: that.right_news_data[that.year].international / that.right_news_data[that.year].total_articles,
+                    }));
+            }});
+
+      $.ajax({url:"templates/topic.template", 
+              type: "GET",
+              dataType: "text",
+              success: function(data){
+                $("#arts-comparison").html(_.template(data, {
+                    topic: 'arts',
+                    topicTitle: 'Arts',
+                    topicDescription: "What percentage of articles were about popular culture or the arts?",
+                    maxBarWidth: that.MAX_BAR_WIDTH,
+                    year: that.year, 
+                    sourceA: that.left_newspaper, 
+                    dataA: that.left_news_data[that.year].arts / that.left_news_data[that.year].total_articles,
+                    sourceB: that.right_newspaper, 
+                    dataB: that.right_news_data[that.year].arts / that.right_news_data[that.year].total_articles,
                     }));
             }});
 

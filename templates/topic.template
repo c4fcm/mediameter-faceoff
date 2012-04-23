@@ -1,15 +1,15 @@
 <%
 // do some final calculations for the display of the data (data computation should be in the views code, not here!)
-maxBarWidth = 180;
-
-maxSourceValue = 0.4;
+maxSourceValue = 0.3;
 scaledDataA = dataA / maxSourceValue;
 scaledDataB = dataB / maxSourceValue;
 %>
 
-<div id="sports-content" class="comparison-content">
+<div id="<%= topic %>-content" class="comparison-content">
 
-    <h2>Sports: <%= year %></h2>
+    <h2><%= topicTitle %>: <%= year %></h2>
+
+    <p><b><%= topicDescription %></b></p>
 
     <ul class="source-a-data">
         <lh><%= sourceA %></lh>

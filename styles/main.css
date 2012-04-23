@@ -1,106 +1,29 @@
-body{
-  font-family:'Droid Sans',verdana,helvetica,arial,sans-serif;
-  font-size:18px;
-  color:#222;
-  background:#333;
-  margin:0;
-  padding:0;
-}
+/** Styes for the overall page **/
 
-h1{
-  font-size:24px;
+body{
+    font-family:'Droid Sans',verdana,helvetica,arial,sans-serif;
+    color:#111111;
+    background:#ffffff;
+    font-size:18px;
+    margin:0;
+    padding:0;
 }
 
 #frame{
-  background:#eee;
-  width:100%; 
-  height:100%;
+    width: 1200px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Top Area */
+/* Input selection area */
 
 #timeline{
   margin-bottom:15px;
+  margin-top: 15px;
 }
 
-option.select{
-  width:166px;
-  height:26px;
-  line-height:26px;
-  font-size:18px;
-  font-weight:bold;
-}
-
-/* Styles for the graph itself */
-.total_graph{
-  border:1px solid #aaa;
-  padding:10px;
-  background:#ddd;
-  border-radius:10px;
-  margin-bottom:10px;
-  display:inline-block;
-}
-
-.total_graph..gender{
-  width:400px;
-}
-.total_graph.gender div{
-  display:inline-block;
-  height:30px;
-  background:#666;
-}
-
-.total_graph.gender .male{
-  background:#68a;
-}
-.total_graph.gender .female{
-  background:#c68;
-}
-
-.total_graph.gender .unknown{
-  background:#666;
-}
-
-.total_graph.gender .remainder{
-  background:#aaa;
-}
-
-.sm{
-  display:inline-block;
-  width:5px; height:5px;
-  margin:1px;
-  background:#666;
-}
-
-.sm.arts{
-  background:#a44;
-}
-
-.sm.foreign{
-  background:#3a3;
-}
-
-.sm.international{
-  background:#36a;
-}
-
-.sm.sports{
-  background:#399;
-}
-
-.left{
-text-align:right;
-}
-
-.right{
-  text-align:left;
-}
-
-.newspaper_visual{
-  width:500px;
-  font-size:12px;
-  display:inline-block;
-  vertical-align:top;
-  margin-left:10px;
-  margin-right:10px;
+select {
+  padding: 10px;
+  font-size:20px;
 }

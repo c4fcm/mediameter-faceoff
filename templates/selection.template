@@ -20,10 +20,20 @@
 
 </div>    
 
-<div id="newspaper_comparison">
+<div class="topic-comparisons" class="comparison-group">
+
+    <div id="sports-comparison" class="comparison-container"></div>
+    
+    <div id="international-comparison" class="comparison-container"></div>
+    
+    <div id="foreign-comparison" class="comparison-container"></div>
+    
+    <div id="arts-comparison" class="comparison-container"></div>
 
 </div>
 
-<div id="gender-comparison" class="comparison-container double-width"></div>
+<div class="comparison-group">
 
-<div id="sports-comparison" class="comparison-container"></div>
+    <div id="gender-comparison" class="comparison-container"></div>
+
+</div>
