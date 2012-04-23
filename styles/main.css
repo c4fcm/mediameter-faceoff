@@ -1,29 +1,47 @@
-/** Styes for the overall page **/
+/** Styes for the overall page 
+    Palette: http://www.colourlovers.com/palette/2135778/dream_the_dream
+**/
 
 body{
-    font-family:'Droid Sans',verdana,helvetica,arial,sans-serif;
-    color:#111111;
-    background:#ffffff;
+    font-family: 'Cabin Condensed', helvetica,arial, sans-serif;
+    background:#354458;
     font-size:18px;
     margin:0;
     padding:0;
 }
 
 #frame{
-    width: 1200px;
+    width: 1000px;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
 }
 
+.logo {
+    float: right;
+    margin-right: 10px;
+}
+
 /* Input selection area */
 
+#controls {
+    border-radius:15px;
+    padding: 10px;
+    background: #EC6D6D;
+    margin-bottom:15px;
+    margin-top: 15px;
+}
+
 #timeline{
-  margin-bottom:15px;
-  margin-top: 15px;
 }
 
 select {
-  padding: 10px;
-  font-size:20px;
+    padding: 10px;
+    font-size:20px;
+}
+
+#small-print {
+    background: #83AB89;
+    font-size: 14px;
+    line-height: 20px;
 }

@@ -3,7 +3,7 @@
   //View ListView
   var SplashView = Backbone.View.extend({
     
-    MAX_BAR_WIDTH: 250,
+    MAX_BAR_WIDTH: 230,
     
     events: {
       "change #right_newspaper": "drawNewspaperComparison",
@@ -107,7 +107,7 @@
                 $("#international-comparison").html(_.template(data, {
                     topic: 'international',
                     topicTitle: 'International',
-                    topicDescription: "What percentage of articles were about countries that were involved with the US?",
+                    topicDescription: "What percentage of articles were about countries where the US had concerns?",
                     maxBarWidth: that.MAX_BAR_WIDTH,
                     year: that.year, 
                     sourceA: that.left_newspaper, 
