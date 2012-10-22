@@ -1,20 +1,20 @@
 {"Chicago Tribune":{
-  "1979":{"total":"683","total_articles":113,"arts":14,"foreign":1,"international":3,"local":32,"national":0,"sports":15,"female_author":5,"male_author":34,"unknown_gender_author":0,"no_author":74},
-  "1989":{"total":"1765", "total_articles":119,"arts":12,"foreign":2,"international":3,"local":50,"national":0,"sports":26,"female_author":14,"male_author":54,"unknown_gender_author":19,"no_author":32},
-  "1999":{"total":"1812","total_articles":123,"arts":11,"foreign":1,"international":3,"local":51,"national":0,"sports":24,"female_author":21,"male_author":42,"unknown_gender_author":22,"no_author":38},
-  "2009":{"total":"1432", "total_articles":116,"arts":13,"foreign":1,"international":2,"local":43,"national":0,"sports":14,"female_author":15,"male_author":34,"unknown_gender_author":67,"no_author":0}},
+  "1979":{"total_articles":680,"arts":43,"foreign":33,"international":16,"local":279,"national":75,"sports":55,"female_author":58,"male_author":215,"unknown_gender_author":18,"no_author":389},
+  "1989":{"total_articles":1765,"arts":186,"foreign":88,"international":32,"local":697,"national":170,"sports":202,"female_author":275,"male_author":774,"unknown_gender_author":272,"no_author":444},
+  "1999":{"total_articles":1811,"arts":90,"foreign":49,"international":32,"local":847,"national":102,"sports":147,"female_author":293,"male_author":602,"unknown_gender_author":308,"no_author":608},
+  "2009":{"total_articles":1432,"arts":96,"foreign":21,"international":11,"local":711,"national":81,"sports":75,"female_author":192,"male_author":355,"unknown_gender_author":885,"no_author":0}},
 "Los Angeles Times":{
-  "1979":{"total":"3308", "total_articles":121,"arts":16,"foreign":6,"international":2,"local":31,"national":0,"sports":19,"female_author":8,"male_author":27,"unknown_gender_author":2,"no_author":84},
-  "1989":{"total":"2590", "total_articles":122,"arts":13,"foreign":4,"international":3,"local":47,"national":0,"sports":22,"female_author":15,"male_author":50,"unknown_gender_author":4,"no_author":53},
-  "1999":{"total":"1583", "total_articles":117,"arts":16,"foreign":0,"international":3,"local":57,"national":0,"sports":24,"female_author":27,"male_author":53,"unknown_gender_author":3,"no_author":34},
-  "2009":{"total":"685", "total_articles":114,"arts":18,"foreign":4,"international":1,"local":35,"national":0,"sports":20,"female_author":21,"male_author":51,"unknown_gender_author":42,"no_author":0}},
+  "1979":{"total_articles":2041,"arts":156,"foreign":131,"international":72,"local":1112,"national":193,"sports":178,"female_author":128,"male_author":547,"unknown_gender_author":61,"no_author":1305},
+  "1989":{"total_articles":2590,"arts":273,"foreign":193,"international":65,"local":1153,"national":269,"sports":311,"female_author":289,"male_author":1042,"unknown_gender_author":121,"no_author":1138},
+  "1999":{"total_articles":1583,"arts":148,"foreign":48,"international":24,"local":879,"national":85,"sports":215,"female_author":341,"male_author":599,"unknown_gender_author":71,"no_author":572},
+  "2009":{"total_articles":685,"arts":64,"foreign":47,"international":19,"local":238,"national":83,"sports":75,"female_author":129,"male_author":269,"unknown_gender_author":287,"no_author":0}},
 "New York Times":{
-  "1979":{"total":"968", "total_articles":119,"arts":16,"foreign":12,"international":6,"local":33,"national":0,"sports":12,"female_author":10,"male_author":47,"unknown_gender_author":13,"no_author":49},
-  "1989":{"total":"1211", "total_articles":119,"arts":19,"foreign":6,"international":2,"local":27,"national":0,"sports":19,"female_author":14,"male_author":44,"unknown_gender_author":22,"no_author":39},
-  "1999":{"total":"1279", "total_articles":115,"arts":16,"foreign":8,"international":2,"local":40,"national":0,"sports":10,"female_author":10,"male_author":42,"unknown_gender_author":2,"no_author":61},
-  "2009":{"total":"1069", "total_articles":118,"arts":13,"foreign":13,"international":2,"local":43,"national":0,"sports":13,"female_author":19,"male_author":49,"unknown_gender_author":18,"no_author":32}},
-"Washington Post":{ 
-  "1979":{"total":"752", "total_articles":115,"arts":10,"foreign":4,"international":6,"local":48,"national":0,"sports":13,"female_author":15,"male_author":44,"unknown_gender_author":4,"no_author":52},
-  "1989":{"total":"1409", "total_articles":121,"arts":10,"foreign":7,"international":4,"local":31,"national":0,"sports":15,"female_author":28,"male_author":60,"unknown_gender_author":1,"no_author":32},
-  "1999":{"total":"970", "total_articles":118,"arts":11,"foreign":6,"international":1,"local":44,"national":0,"sports":25,"female_author":23,"male_author":52,"unknown_gender_author":3,"no_author":40},
-  "2009":{"total":"971", "total_articles":117,"arts":16,"foreign":3,"international":4,"local":39,"national":0,"sports":27,"female_author":21,"male_author":24,"unknown_gender_author":72,"no_author":0}}}
+  "1979":{"total_articles":968,"arts":89,"foreign":106,"international":53,"local":264,"national":126,"sports":65,"female_author":83,"male_author":378,"unknown_gender_author":98,"no_author":409},
+  "1989":{"total_articles":1211,"arts":105,"foreign":108,"international":42,"local":281,"national":184,"sports":88,"female_author":111,"male_author":438,"unknown_gender_author":218,"no_author":444},
+  "1999":{"total_articles":1279,"arts":123,"foreign":82,"international":32,"local":590,"national":111,"sports":143,"female_author":175,"male_author":394,"unknown_gender_author":12,"no_author":698},
+  "2009":{"total_articles":1069,"arts":143,"foreign":110,"international":31,"local":375,"national":140,"sports":90,"female_author":197,"male_author":417,"unknown_gender_author":161,"no_author":294}},
+"Washington Post":{
+  "1979":{"total_articles":724,"arts":55,"foreign":57,"international":38,"local":294,"national":107,"sports":72,"female_author":108,"male_author":310,"unknown_gender_author":32,"no_author":274},
+  "1989":{"total_articles":1409,"arts":95,"foreign":118,"international":42,"local":449,"national":234,"sports":117,"female_author":264,"male_author":695,"unknown_gender_author":70,"no_author":380},
+  "1999":{"total_articles":970,"arts":67,"foreign":43,"international":26,"local":365,"national":145,"sports":125,"female_author":205,"male_author":406,"unknown_gender_author":53,"no_author":306},
+  "2009":{"total_articles":970,"arts":77,"foreign":30,"international":21,"local":313,"national":143,"sports":122,"female_author":145,"male_author":250,"unknown_gender_author":573,"no_author":2}}}
